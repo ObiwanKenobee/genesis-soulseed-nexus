@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Genesis System custom colors
+				genesis: {
+					cosmic: '#1A1F2C',
+					spirit: '#9b87f5',
+					growth: '#4CAF50',
+					energy: '#FF9800',
+					water: '#00BCD4',
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,38 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-gentle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
+				},
+				'rotate-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-500px 0' },
+					'100%': { backgroundPosition: '500px 0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-gentle': 'pulse-gentle 4s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 12s linear infinite',
+				'shimmer': 'shimmer 3s infinite linear'
+			},
+			backgroundImage: {
+				'gradient-cosmic': 'linear-gradient(to right, #1A1F2C, #7E69AB)',
+				'gradient-spirit': 'linear-gradient(to right, #9b87f5, #D6BCFA)',
+				'gradient-growth': 'linear-gradient(to right, #4CAF50, #F2FCE2)',
+				'gradient-energy': 'linear-gradient(to right, #FF9800, #FEF7CD)',
+				'shimmer-gradient': 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%)'
 			}
 		}
 	},
