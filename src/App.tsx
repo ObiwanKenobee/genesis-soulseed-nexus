@@ -10,15 +10,17 @@ import SoulSeedJourney from "./pages/SoulSeedJourney";
 import LifeCredits from "./pages/LifeCredits";
 import WisdomStream from "./pages/WisdomStream";
 import HoloGarden from "./pages/HoloGarden";
+import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
       <BrowserRouter>
+        <Navigation />
+        <Toaster />
+        <Sonner />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/soulseed" element={<SoulSeedJourney />} />
